@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+#nav-color {
+  background-color: skyblue;
+}
+.hero-image {
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  margin-top: 20px;
+}
+#about h1 {
+  padding: 10px 10px 0px 10px;
+}
+.not-found {
+  text-align: center;
+  margin: 15% auto;
+}
+.home-page {
+  margin: 5.4% auto;
+}
+.home-title {
+  padding-bottom: 5px;
+}
+body {
+  background: #87ceeb38;
+}

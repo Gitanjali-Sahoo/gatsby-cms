@@ -7,13 +7,15 @@
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
-
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby ITHS`,
+    title: `Gitanjali`,
     description: `Enkel starter template för ITHS-studenter`,
-    author: `Håkan Gleissman`,
+    author: `Gitanjali`,
     siteUrl: `http://dummy-site.com`,
   },
   plugins: [
@@ -26,7 +28,16 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`, 
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+      },
+    },
+
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
