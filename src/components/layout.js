@@ -22,6 +22,7 @@ const Layout = ({ children }) => {
 
   const { allContentfulPages } = useNavigation()
 
+  //home page
   return (
     <>
       <Navbar  id="nav-color"  expand="lg">
